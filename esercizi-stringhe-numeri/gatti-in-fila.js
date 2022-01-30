@@ -17,3 +17,36 @@
 
   http://www.imparareaprogrammare.it
 */
+
+
+var numeroTotaleGatti = parseInt(Math.random()*100);
+var gattiInOgniFila = parseInt(Math.random()*100);
+
+console.log('Input: numero di gatti = '+ numeroTotaleGatti+ ' , gatti per fila = '+gattiInOgniFila);
+
+var gattiRestanti = numeroTotaleGatti%gattiInOgniFila;
+
+//  42/6=7
+
+
+if(gattiRestanti!=0)
+{
+  var numeroDiFile = Math.ceil(numeroTotaleGatti/gattiInOgniFila);
+
+  /*
+
+  ALTRA POSSIBILE SOLUZIONE CON parseInt() per ottenere il numero di file.
+  var numeroDiFile = parseInt(numeroTotaleGatti/gattiInOgniFila)+1
+
+  */
+
+  var gattiMancanti= gattiInOgniFila - gattiRestanti;
+
+  console.log('Output: numero di file = ' +numeroDiFile+', gatti mancanti = '+ gattiMancanti);
+}
+else 
+{
+  var numeroDiFile = Math.ceil(numeroTotaleGatti/gattiInOgniFila);
+  console.log('Output: numero di file = ' +numeroDiFile);
+}
+
